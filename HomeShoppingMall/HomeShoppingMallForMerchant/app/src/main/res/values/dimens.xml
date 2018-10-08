@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="title">18dp</dimen>
+    <dimen name="function_btn">16dp</dimen>
+    <dimen name="text">14dp</dimen>
+    <dimen name="small_text">12dp</dimen>
+    <dimen name="action_bar_height">56dp</dimen>
+    <dimen name="present_record_date">20dp</dimen>
+
+    <dimen name="fixed_height_top_padding_inactive">2dp
+    </dimen><!-- 8(Top Padding) - 12/2(extra padding due to badges) = 2 -->
+    <dimen name="fixed_height_top_padding_active">0dp
+    </dimen><!-- 6(Top Padding) - 12/2(extra padding due to badges) = 0 -->
+    <dimen name="fixed_height_bottom_padding">8dp</dimen>
+
+    <dimen name="fixed_label_active">12sp</dimen>
+    <dimen name="fixed_label_inactive">10sp</dimen>
+    <dimen name="friend_map_btn_height">42dp</dimen>
+    <dimen name="friend_map_bound_padding">80dp</dimen>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="60dp"
+    android:layout_height="80dp"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/iv_take_photo"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:padding="5dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/button_shangchuantupian_nor" />
+
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@mipmap/t_guanbi"
+        android:visibility="gone" />
+</RelativeLayout>

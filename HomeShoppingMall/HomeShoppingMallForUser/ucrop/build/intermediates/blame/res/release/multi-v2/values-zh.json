@@ -1,0 +1,48 @@
+{
+    "logs": [
+        {
+            "outputFile": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForUser\\ucrop\\build\\intermediates\\res\\merged\\release\\values-zh\\values-zh.xml",
+            "map": [
+                {
+                    "source": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForUser\\ucrop\\src\\main\\res\\values-zh\\strings.xml",
+                    "from": {
+                        "startLines": "3,2,5",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "71,17,126",
+                        "endColumns": "53,53,46",
+                        "endOffsets": "120,66,168"
+                    },
+                    "to": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,109,163",
+                        "endColumns": "53,53,46",
+                        "endOffsets": "104,158,205"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForUser\\ucrop\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-zh\\values-zh.xml",
+            "map": [
+                {
+                    "source": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForUser\\ucrop\\src\\main\\res\\values-zh\\strings.xml",
+                    "from": {
+                        "startLines": "3,2,5",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "71,17,126",
+                        "endColumns": "53,53,46",
+                        "endOffsets": "120,66,168"
+                    },
+                    "to": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,109,163",
+                        "endColumns": "53,53,46",
+                        "endOffsets": "104,158,205"
+                    }
+                }
+            ]
+        }
+    ]
+}

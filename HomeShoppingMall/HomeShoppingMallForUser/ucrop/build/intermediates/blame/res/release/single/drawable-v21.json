@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForUser\\ucrop\\build\\intermediates\\res\\merged\\release\\drawable-v21\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\L\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b33ab6db31880f11ac9dd010031dbe57\\res\\drawable-v21\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForUser\\ucrop\\build\\intermediates\\res\\merged\\release\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\L\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b33ab6db31880f11ac9dd010031dbe57\\res\\drawable-v21\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForUser\\ucrop\\build\\intermediates\\res\\merged\\release\\drawable-v21\\notification_action_background.xml",
+        "source": "C:\\Users\\L\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\ec992a991075b6494961b1dec52c80ee\\res\\drawable-v21\\notification_action_background.xml"
+    },
+    {
+        "merged": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForUser\\ucrop\\build\\intermediates\\res\\merged\\release\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "C:\\Users\\L\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b33ab6db31880f11ac9dd010031dbe57\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+    }
+]

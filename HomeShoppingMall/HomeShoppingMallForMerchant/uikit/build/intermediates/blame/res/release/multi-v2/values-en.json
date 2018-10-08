@@ -1,0 +1,82 @@
+{
+    "logs": [
+        {
+            "outputFile": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForMerchant\\uikit\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-en\\values-en.xml",
+            "map": [
+                {
+                    "source": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForMerchant\\uikit\\res\\values-en\\strings-ptr.xml",
+                    "from": {
+                        "startLines": "3,2,1",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "120,63,16",
+                        "endColumns": "49,56,46",
+                        "endOffsets": "165,115,58"
+                    },
+                    "to": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,105,162",
+                        "endColumns": "49,56,46",
+                        "endOffsets": "100,157,204"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\L\\.gradle\\caches\\transforms-1\\files-1.1\\takephoto_library-4.0.3.aar\\76084c98e6ecd927209fcdc45da094a9\\res\\values-en\\values-en.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,146,209,292,365,426,531,583,693,823,935,977",
+                        "endColumns": "90,62,82,72,60,104,51,109,129,111,41,66",
+                        "endOffsets": "141,204,287,360,421,526,578,688,818,930,972,1039"
+                    },
+                    "to": {
+                        "startLines": "5,6,7,8,9,10,11,12,13,14,15,16",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "209,300,363,446,519,580,685,737,847,977,1089,1131",
+                        "endColumns": "90,62,82,72,60,104,51,109,129,111,41,66",
+                        "endOffsets": "295,358,441,514,575,680,732,842,972,1084,1126,1193"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForMerchant\\uikit\\build\\intermediates\\res\\merged\\release\\values-en\\values-en.xml",
+            "map": [
+                {
+                    "source": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForMerchant\\uikit\\res\\values-en\\strings-ptr.xml",
+                    "from": {
+                        "startLines": "3,2,1",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "120,63,16",
+                        "endColumns": "49,56,46",
+                        "endOffsets": "165,115,58"
+                    },
+                    "to": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,105,162",
+                        "endColumns": "49,56,46",
+                        "endOffsets": "100,157,204"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\L\\.gradle\\caches\\transforms-1\\files-1.1\\takephoto_library-4.0.3.aar\\76084c98e6ecd927209fcdc45da094a9\\res\\values-en\\values-en.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,146,209,292,365,426,531,583,693,823,935,977",
+                        "endColumns": "90,62,82,72,60,104,51,109,129,111,41,66",
+                        "endOffsets": "141,204,287,360,421,526,578,688,818,930,972,1039"
+                    },
+                    "to": {
+                        "startLines": "5,6,7,8,9,10,11,12,13,14,15,16",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "209,300,363,446,519,580,685,737,847,977,1089,1131",
+                        "endColumns": "90,62,82,72,60,104,51,109,129,111,41,66",
+                        "endOffsets": "295,358,441,514,575,680,732,842,972,1084,1126,1193"
+                    }
+                }
+            ]
+        }
+    ]
+}

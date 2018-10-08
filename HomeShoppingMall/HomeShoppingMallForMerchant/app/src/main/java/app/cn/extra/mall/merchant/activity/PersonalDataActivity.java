@@ -1,0 +1,292 @@
+package app.cn.extra.mall.merchant.activity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
+import com.github.ybq.android.spinkit.style.Wave;
+import com.orangegangsters.github.swipyrefreshlayout.library.SwipyRefreshLayout;
+import com.zhy.adapter.recyclerview.CommonAdapter;
+import com.zhy.adapter.recyclerview.MultiItemTypeAdapter;
+import com.zhy.adapter.recyclerview.base.ViewHolder;
+import com.zhy.adapter.recyclerview.wrapper.HeaderAndFooterWrapper;
+
+import java.util.List;
+
+import app.cn.extra.mall.merchant.R;
+import app.cn.extra.mall.merchant.utils.Constants;
+import app.cn.extra.mall.merchant.utils.SharePreferenceUtil;
+import app.cn.extra.mall.merchant.vo.GetShop;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import cfkj.app.cn.cfkjcommonlib.common.BaseActivty;
+import cfkj.app.cn.cfkjcommonlib.common.Utils;
+import cfkj.app.cn.cfkjcommonlib.okhttp.OkHttpUtils;
+import cfkj.app.cn.cfkjcommonlib.okhttp.callback.StringCallback;
+import cfkj.app.cn.cfkjcommonlib.view.ReplaceViewHelper.VaryViewHelperController;
+import okhttp3.Call;
+
+/**
+ * 个人资料
+ */
+public class PersonalDataActivity extends BaseActivty {
+    @BindView(R.id.recyclerView)
+    RecyclerView recyclerView;
+    @BindView(R.id.refreshLayout)
+    SwipyRefreshLayout refreshLayout;
+    @BindView(R.id.progressBar)
+    ProgressBar progressBar;
+    @BindView(R.id.iv_shop_pic)
+    ImageView ivShopPic;
+    @BindView(R.id.tv_shop_name)
+    TextView tvShopName;
+    private HeaderAndFooterWrapper mHeaderAndFooterWrapper;
+    private VaryViewHelperController varyViewHelperController;
+    SharePreferenceUtil sharePreferenceUtil = null;
+    private CommonAdapter<GetShop.DataBean.ProductListBean> adapter;
+    /**
+     * 用于存放临时商品数据
+     */
+    List<GetShop.DataBean.ProductListBean> productListBeanList = null;
+    /**
+     * 商铺实体
+     */
+    GetShop getShop = null;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_personal_data);
+        ButterKnife.bind(this);
+        init();
+    }
+
+    private void init() {
+        sharePreferenceUtil = new SharePreferenceUtil(PersonalDataActivity.this, Constants.SAVE_USER);
+        /**
+         * 设置异常情况界面
+         */
+        varyViewHelperController = createCaseViewHelperController(refreshLayout);
+        varyViewHelperController.setUpRefreshViews(varyViewHelperController.getErrorView(),
+                varyViewHelperController.getNetworkPoorView(),varyViewHelperController.getEmptyView());
+        initRefreshLayout();
+        initRecyclerView();
+        /**
+         * 设置加载动画展示样式
+         */
+        Wave wave = new Wave();
+        progressBar.setIndeterminateDrawable(wave);
+        getStoreDetail(sharePreferenceUtil.getSID(), "", "0", "");
+    }
+
+    /**
+     * 初始化RecyclerView
+     */
+    private void initRecyclerView() {
+        /**
+         * 网格布局
+         */
+        GridLayoutManager layoutManage = new GridLayoutManager(PersonalDataActivity.this,
+                2);
+        recyclerView.setLayoutManager(layoutManage);
+        /**
+         * 添加分隔线
+         */
+//        recyclerView.addItemDecoration(new DividerItemDecoration(PersonalDataActivity.this,
+//                DividerItemDecoration.VERTICAL));
+    }
+
+    /**
+     * 初始化SwipeRefreshLayout
+     */
+    private void initRefreshLayout() {
+        refreshLayout.setColorSchemeResources(android.R.color.holo_blue_light,
+                android.R.color.holo_red_light, android.R.color.holo_orange_light,
+                android.R.color.holo_green_light);
+        /**
+         * 禁用刷新
+         */
+        refreshLayout.setEnabled(false);
+    }
+
+    /**
+     * 获取店铺详情接口
+     * s--商铺id
+     * ptdId--商品类别
+     * saleSort--销量排序
+     * priceSort--价格排序
+     * p--当前页
+     * ps--页大小
+     */
+    private void getStoreDetail(String sId, String ptdId, String saleSort, String priceSort) {
+        if (Utils.isNetworkAvailable(PersonalDataActivity.this)) {
+            if (progressBar != null) {
+                progressBar.setVisibility(View.VISIBLE);
+            }
+            OkHttpUtils
+                    .post()
+                    .url(Constants.getStoreDetail)
+                    .addParams("sId", sId)
+                    .addParams("uId", sharePreferenceUtil.getUID())
+                    .addParams("ptdId", ptdId)
+                    .addParams("saleSort", saleSort)
+                    .addParams("priceSort", priceSort)
+                    .addParams("currentPage", 1 + "")
+                    .addParams("size", 3 + "")
+                    .addHeader("Content-Type", "application/x-www-form-urlencoded")
+                    .build()
+                    .execute(new StringCallback() {
+                        @Override
+                        public void onError(Call call, Exception e, int id) {
+                            if (progressBar != null) {
+                                progressBar.setVisibility(View.GONE);
+                            }
+                            varyViewHelperController.showErrorView();
+                        }
+
+                        @Override
+                        public void onResponse(String response, int id) {
+                            if (progressBar != null) {
+                                progressBar.setVisibility(View.GONE);
+                            }
+                            /**
+                             * 恢复显示数据的View
+                             */
+                            varyViewHelperController.restore();
+                            Utils.LogJson(response);
+                            getShop = new GetShop();
+                            getShop = Utils.parserJsonResult(response,
+                                    GetShop.class);
+                            if (Constants.OK.equals(getShop.getFlag())) {
+                                if (!TextUtils.isEmpty(getShop.getData().getSName())) {
+                                    tvShopName.setText(getShop.getData().getSName());
+                                }
+                                RequestOptions requestOptions = new RequestOptions()
+                                        .placeholder(R.drawable.ic_exception)
+                                        .error(R.drawable.ic_exception)
+                                        .fallback(R.drawable.ic_exception);
+                                Glide.with(PersonalDataActivity.this)
+                                        .load(getShop.getData().getPicName()+ "?x-oss-process=image/resize,w_"
+                                                + (Utils.getScreenWidth(PersonalDataActivity.this)))
+                                        .apply(requestOptions)
+                                        .into(ivShopPic);
+                                productListBeanList = getShop.getData()
+                                        .getProductList();
+                                setShopData();
+                                setRecyclerViewHeaderAndFooter();
+                            } else {
+                                varyViewHelperController.showErrorView();
+                            }
+                        }
+                    });
+        } else {
+            varyViewHelperController.showNetworkPoorView();
+        }
+    }
+
+    /**
+     * 填充商品数据
+     */
+    private void setShopData() {
+        adapter = new CommonAdapter<GetShop.DataBean.ProductListBean>(
+                PersonalDataActivity.this, R.layout.grid_item_shop, productListBeanList) {
+            @Override
+            protected void convert(ViewHolder holder,
+                                   GetShop.DataBean.ProductListBean
+                                           productListBeanList, int position) {
+                RequestOptions requestOptions = new RequestOptions()
+                        .error(R.drawable.ic_exception)
+                        .fallback(R.drawable.ic_exception);
+                Glide.with(PersonalDataActivity.this)
+                        .load(productListBeanList.getPicName()+ "?x-oss-process=image/resize,w_"
+                                + (Utils.getScreenWidth(PersonalDataActivity.this)))
+                        .apply(requestOptions)
+                        .into((ImageView) holder.getView(R.id.img_item_product));
+                if (!TextUtils.isEmpty(productListBeanList.getPName())) {
+                    if (12 < productListBeanList.getPName().length()) {
+                        holder.setText(R.id.tv_item_product_name,
+                                productListBeanList.getPName()
+                                        .substring(0, 10) + "···");
+                    } else {
+                        holder.setText(R.id.tv_item_product_name,
+                                productListBeanList.getPName());
+                    }
+                } else {
+                    holder.setText(R.id.tv_item_product_name, "");
+                }
+                holder.setText(R.id.tv_item_product_price,
+                        "¥" + productListBeanList.getPNowPrice() + "");
+                holder.setText(R.id.tv_item_product_num, productListBeanList.getPBrowseNum() + "人浏览");
+            }
+        };
+        /**
+         * 推荐商品点击事件
+         */
+        adapter.setOnItemClickListener(new MultiItemTypeAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, RecyclerView.ViewHolder holder, int position) {
+                Intent intent = new Intent(PersonalDataActivity.this, GoodsDetailActivity.class);
+                String pid = productListBeanList.get(position).getPId();
+                intent.putExtra("pid", pid);
+                startActivity(intent);
+            }
+
+            @Override
+            public boolean onItemLongClick(View view, RecyclerView.ViewHolder holder, int position) {
+                return false;
+            }
+        });
+    }
+
+    /**
+     * 设置RecyclerViewHeaderAndFooter
+     */
+    private void setRecyclerViewHeaderAndFooter() {
+        mHeaderAndFooterWrapper = new HeaderAndFooterWrapper(adapter);
+        /**
+         * 设置RecyclerViewFooter
+         */
+        View footerView = LayoutInflater.from(PersonalDataActivity.this).inflate(
+                R.layout.common_foot_view, null);
+        TextView tips = footerView.findViewById(R.id.tips);
+        tips.setText("查看更多");
+        tips.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoShopActivity();
+            }
+        });
+        mHeaderAndFooterWrapper.addFootView(footerView);
+        recyclerView.setAdapter(mHeaderAndFooterWrapper);
+    }
+
+    @OnClick({R.id.img_back})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.img_back:
+                finish();
+                break;
+            default:
+                break;
+        }
+    }
+
+    /**
+     * 跳转店铺页面
+     */
+    private void gotoShopActivity() {
+        Intent intent = new Intent(PersonalDataActivity.this, ShopActivity.class);
+        intent.putExtra("sId", sharePreferenceUtil.getSID());
+        startActivity(intent);
+    }
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+     >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+        <TextView
+        android:id="@+id/tv_relase_goods_fill_group_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:textColor="#333333"
+        android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/img_relase_goods_fill_group_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/icon_fenleixiala_nor"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/img_compelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_relase_goods_fill_group_title"
+            android:layout_marginLeft="11dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

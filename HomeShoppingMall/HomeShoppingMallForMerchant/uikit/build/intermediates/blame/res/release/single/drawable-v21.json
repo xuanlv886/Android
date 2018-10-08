@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForMerchant\\uikit\\build\\intermediates\\res\\merged\\release\\drawable-v21\\notification_action_background.xml",
+        "source": "C:\\Users\\L\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\ec992a991075b6494961b1dec52c80ee\\res\\drawable-v21\\notification_action_background.xml"
+    },
+    {
+        "merged": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForMerchant\\uikit\\build\\intermediates\\res\\merged\\release\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\L\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b33ab6db31880f11ac9dd010031dbe57\\res\\drawable-v21\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForMerchant\\uikit\\build\\intermediates\\res\\merged\\release\\drawable-v21\\avd_show_password.xml",
+        "source": "C:\\Users\\L\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\419f0f4accf29beef923cb05cb09009a\\res\\drawable-v21\\avd_show_password.xml"
+    },
+    {
+        "merged": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForMerchant\\uikit\\build\\intermediates\\res\\merged\\release\\drawable-v21\\avd_hide_password.xml",
+        "source": "C:\\Users\\L\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\419f0f4accf29beef923cb05cb09009a\\res\\drawable-v21\\avd_hide_password.xml"
+    },
+    {
+        "merged": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForMerchant\\uikit\\build\\intermediates\\res\\merged\\release\\drawable-v21\\design_password_eye.xml",
+        "source": "C:\\Users\\L\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\419f0f4accf29beef923cb05cb09009a\\res\\drawable-v21\\design_password_eye.xml"
+    },
+    {
+        "merged": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForMerchant\\uikit\\build\\intermediates\\res\\merged\\release\\drawable-v21\\nim_touch_bg.xml",
+        "source": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForMerchant\\uikit\\res\\drawable-v21\\nim_touch_bg.xml"
+    },
+    {
+        "merged": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForMerchant\\uikit\\build\\intermediates\\res\\merged\\release\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "C:\\Users\\L\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b33ab6db31880f11ac9dd010031dbe57\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForMerchant\\uikit\\build\\intermediates\\res\\merged\\release\\drawable-v21\\design_bottom_navigation_item_background.xml",
+        "source": "C:\\Users\\L\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\419f0f4accf29beef923cb05cb09009a\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
+    },
+    {
+        "merged": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForMerchant\\uikit\\build\\intermediates\\res\\merged\\release\\drawable-v21\\crop__selectable_background.xml",
+        "source": "C:\\Users\\L\\.gradle\\caches\\transforms-1\\files-1.1\\lib_crop-1.0.0.aar\\941c346bd633e336a03bc83a022ae457\\res\\drawable-v21\\crop__selectable_background.xml"
+    },
+    {
+        "merged": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForMerchant\\uikit\\build\\intermediates\\res\\merged\\release\\drawable-v21\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\L\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\b33ab6db31880f11ac9dd010031dbe57\\res\\drawable-v21\\abc_edit_text_material.xml"
+    }
+]

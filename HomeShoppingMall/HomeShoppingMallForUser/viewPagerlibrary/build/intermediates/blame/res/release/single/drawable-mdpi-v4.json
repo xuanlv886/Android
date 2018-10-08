@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForUser\\viewPagerlibrary\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\vpi__tab_unselected_focused_holo.9.png",
+        "source": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForUser\\viewPagerlibrary\\src\\main\\res\\drawable-mdpi\\vpi__tab_unselected_focused_holo.9.png"
+    },
+    {
+        "merged": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForUser\\viewPagerlibrary\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\vpi__tab_selected_pressed_holo.9.png",
+        "source": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForUser\\viewPagerlibrary\\src\\main\\res\\drawable-mdpi\\vpi__tab_selected_pressed_holo.9.png"
+    },
+    {
+        "merged": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForUser\\viewPagerlibrary\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\vpi__tab_unselected_holo.9.png",
+        "source": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForUser\\viewPagerlibrary\\src\\main\\res\\drawable-mdpi\\vpi__tab_unselected_holo.9.png"
+    },
+    {
+        "merged": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForUser\\viewPagerlibrary\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\vpi__tab_unselected_pressed_holo.9.png",
+        "source": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForUser\\viewPagerlibrary\\src\\main\\res\\drawable-mdpi\\vpi__tab_unselected_pressed_holo.9.png"
+    },
+    {
+        "merged": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForUser\\viewPagerlibrary\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\notification_bg_normal.9.png",
+        "source": "C:\\Users\\L\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\ec992a991075b6494961b1dec52c80ee\\res\\drawable-mdpi-v4\\notification_bg_normal.9.png"
+    },
+    {
+        "merged": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForUser\\viewPagerlibrary\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png",
+        "source": "C:\\Users\\L\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\ec992a991075b6494961b1dec52c80ee\\res\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForUser\\viewPagerlibrary\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\notification_bg_low_normal.9.png",
+        "source": "C:\\Users\\L\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\ec992a991075b6494961b1dec52c80ee\\res\\drawable-mdpi-v4\\notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForUser\\viewPagerlibrary\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png",
+        "source": "C:\\Users\\L\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\ec992a991075b6494961b1dec52c80ee\\res\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForUser\\viewPagerlibrary\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png",
+        "source": "C:\\Users\\L\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\ec992a991075b6494961b1dec52c80ee\\res\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForUser\\viewPagerlibrary\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\vpi__tab_selected_holo.9.png",
+        "source": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForUser\\viewPagerlibrary\\src\\main\\res\\drawable-mdpi\\vpi__tab_selected_holo.9.png"
+    },
+    {
+        "merged": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForUser\\viewPagerlibrary\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\vpi__tab_selected_focused_holo.9.png",
+        "source": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForUser\\viewPagerlibrary\\src\\main\\res\\drawable-mdpi\\vpi__tab_selected_focused_holo.9.png"
+    }
+]

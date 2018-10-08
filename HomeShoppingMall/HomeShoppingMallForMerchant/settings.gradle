@@ -1,0 +1,1 @@
+include ':app', ':cfkjcommonlib',':viewPagerlibrary',':ucrop',':imageselectorLibrary',':uikit',':slidelibrary'

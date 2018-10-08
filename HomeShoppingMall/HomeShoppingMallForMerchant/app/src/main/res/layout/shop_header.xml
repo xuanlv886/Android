@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/banner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.youth.banner.Banner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="155dp" />
+
+        <RelativeLayout
+            android:id="@+id/follow_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/banner"
+            android:background="@color/white">
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignBottom="@+id/follow_layout"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="15dp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_below="@+id/banner_layout"
+        android:layout_marginTop="5dp"
+        android:background="@color/grayline" />
+
+    <include
+        android:id="@+id/store_classify"
+        layout="@layout/store_classify_layout" />
+    <!-- Tab底部下划线 -->
+    <ImageView
+        android:id="@+id/iv_tab_bottom_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/store_classify"
+        android:background="@drawable/under_line"
+        android:scaleType="matrix"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_below="@+id/store_classify"
+        android:layout_marginTop="5dp"
+        android:background="@color/grayline"
+        android:visibility="gone" />
+</LinearLayout>

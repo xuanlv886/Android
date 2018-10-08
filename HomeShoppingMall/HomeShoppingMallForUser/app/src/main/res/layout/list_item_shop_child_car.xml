@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:padding="10dp">
+
+        <CheckBox
+            android:id="@+id/ck_item_shop_car"
+            style="@style/CustomCheckboxTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:checked="false"
+            android:padding="10dp"
+            android:focusable="true"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ck_item_shop_car">
+
+            <ImageView
+                android:src="@mipmap/sp"
+                android:id="@+id/img_item_shop_pic"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tv_item_shop_goods_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/img_item_shop_pic"
+                android:layout_marginLeft="10dp"
+                android:layout_toLeftOf="@+id/rl_state"
+                android:layout_toRightOf="@+id/img_item_shop_pic"
+                android:text="商品名称"
+                android:textColor="#333333"
+                android:textSize="12dp" />
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/rl_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_item_shop_goods_name"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp">
+
+                <TextView
+                    android:id="@+id/tv_item_shop_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="未体验"
+                    android:textColor="#FF7F6C"
+                    android:textSize="12dp" />
+
+                <ImageView
+                    android:id="@+id/img_item_shop_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tv_item_shop_state"
+                    android:src="@mipmap/icon_fenleixiala_nor" />
+            </RelativeLayout>
+
+            <ImageView
+                android:padding="5dp"
+                android:id="@+id/img_item_shop_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/img_item_shop_pic"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/button_jiahao_nor" />
+
+            <EditText
+                android:padding="5dp"
+                android:id="@+id/et_item_shop_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/img_item_shop_pic"
+                android:layout_toLeftOf="@+id/img_item_shop_add"
+                android:background="@null"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="#333333"
+                android:textSize="14dp" />
+
+            <ImageView
+                android:padding="5dp"
+                android:id="@+id/img_item_shop_jian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/img_item_shop_pic"
+                android:layout_toLeftOf="@+id/et_item_shop_num"
+                android:src="@mipmap/button_jianhao_nor" />
+            <TextView
+                android:id="@+id/tv_item_shop_moneys"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tv_item_shop_goods_name"
+                android:layout_below="@+id/tv_item_shop_goods_name"
+                android:layout_marginTop="10dp"
+                android:text="¥12.00"
+                android:textColor="@color/orange"
+                android:textSize="11dp" />
+
+            <TextView
+                android:id="@+id/tv_item_shop_classify"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tv_item_shop_moneys"
+                android:layout_below="@+id/tv_item_shop_moneys"
+                android:layout_marginTop="9dp"
+                android:text="商品属性"
+                android:textColor="#999999"
+                android:textSize="10dp" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

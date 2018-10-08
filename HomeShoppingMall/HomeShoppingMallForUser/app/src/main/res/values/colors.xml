@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#FFFFFF</color><!--白色 -->
+    <color name="black">#000000</color><!--黑色 -->
+    <color name="transparent50">#80000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="grayline">#DDDDDD</color>
+    <color name="gray">#ECECEC</color>
+    <color name="blue">#358DEE</color>
+    <color name="blues">#358DEE</color>
+    <color name="graytext">#B4B4B4</color>
+
+    <color name="orange">#F47A00</color>
+    <color name="teal">#607A8B</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#44B549</color>
+
+    <color name="background_gray">#EEEEEE</color>
+    <color name="text_color">#666666</color>
+    <color name="holo_red_light">#ffff4444</color>
+    <color name="gray_text_color">#999999</color>
+    <color name="bule">#01C2AD</color>
+    <color name="black_tab">#282828</color>
+    <color name="money_red">#DD2F4E</color>
+    <color name="order_content_gray">#FAFAFA</color>
+
+    <color name="background">#FFFFFF</color>
+    <color name="split_line">#11112233</color>
+    <color name="text1">#59B29C</color>
+    <color name="text2">#333333</color>
+    <color name="albumback">#E1E0DE</color>
+    <color name="plugin_camera_black">#000000</color>
+</resources>

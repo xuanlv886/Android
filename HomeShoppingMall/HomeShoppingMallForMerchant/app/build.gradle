@@ -1,0 +1,89 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'machengxin'
+            keyPassword '18348888899'
+            storeFile file('C:/Users/L/Desktop/keyStore.jks')
+            storePassword '18348888899'
+        }
+    }
+    buildToolsVersion '27.0.3'
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "app.cn.extra.mall.merchant"
+        minSdkVersion 14
+        targetSdkVersion 27
+        versionCode 6
+        versionName "2018091501"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    productFlavors {
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.8.1'
+    implementation 'com.github.bumptech.glide:glide:4.6.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
+    // 使用okhttp3加载图片
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.6.1'
+    // 底部导航栏
+    implementation 'com.ashokvarma.android:bottom-navigation-bar:2.0.4'
+    // 通用RecyclerViewAdapter
+    implementation 'com.zhy:base-rvadapter:3.0.3'
+    // 加载动画
+    implementation 'com.github.ybq:Android-SpinKit:1.1.0'
+    //SwipyRefreshLayout
+    implementation 'com.github.orangegangsters:swipy:1.2.3@aar'
+    // 轮播图
+    implementation 'com.youth.banner:banner:1.4.10'
+    implementation project(':cfkjcommonlib')
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'com.aliyun.dpa:oss-android-sdk:+'
+    implementation files('libs/AMap3DMap_6.3.0_AMapSearch_6.1.0_20180619.jar')
+    implementation files('libs/AMap_Location_V4.0.1_20180426.jar')
+    implementation files('libs/libammsdk.jar')
+    implementation project(':viewPagerlibrary')
+    implementation files('libs/picasso-2.5.2.jar')
+    implementation 'com.github.chrisbanes:PhotoView:1.2.6'
+    implementation 'com.google.code.gson:gson:2.2.4'
+    implementation project(':imageselectorLibrary')
+    implementation project(':ucrop')
+    implementation 'pub.devrel:easypermissions:0.1.9'
+    implementation project(':uikit')
+    implementation files('libs/alipaySdk-20170725.jar')
+}

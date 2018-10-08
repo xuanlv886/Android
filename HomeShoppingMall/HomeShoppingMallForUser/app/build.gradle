@@ -1,0 +1,98 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'machengxin'
+            keyPassword '18348888899'
+            storeFile file('C:/Users/L/Desktop/keyStore.jks')
+            storePassword '18348888899'
+        }
+    }
+    buildToolsVersion '27.0.3'
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "app.cn.extra.mall.user"
+        minSdkVersion 14
+        targetSdkVersion 27
+        versionCode 5
+        versionName "2018091501"
+        multiDexEnabled true
+        ndk {
+            //设置支持的SO库架构
+            abiFilters "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    testImplementation 'junit:junit:4.12'
+    // 通用工具库
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    // 轮播图
+    implementation 'com.youth.banner:banner:1.4.10'
+    implementation 'com.squareup.okhttp3:okhttp:3.8.1'
+    implementation 'com.github.bumptech.glide:glide:4.6.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
+    // 使用okhttp3加载图片
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.6.1'
+    // 底部导航栏
+    implementation 'com.ashokvarma.android:bottom-navigation-bar:2.0.4'
+    //SwipyRefreshLayout
+    implementation 'com.github.orangegangsters:swipy:1.2.3@aar'
+    // 通用RecyclerViewAdapter
+    implementation 'com.zhy:base-rvadapter:3.0.3'
+    // 加载动画
+    implementation 'com.github.ybq:Android-SpinKit:1.1.0'
+    //    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.6'
+    implementation project(':slidelibrary')
+    implementation 'com.google.code.gson:gson:2.2.4'
+    implementation files('libs/picasso-2.5.2.jar')
+    implementation 'com.github.chrisbanes:PhotoView:1.2.6'
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    implementation files('libs/aliyun-oss-sdk-android-2.3.0.jar')
+    implementation files('libs/alipaySdk-20170725.jar')
+    implementation project(':cfkjcommonlib')
+    implementation project(':uikit')
+    implementation files('libs/AndroidSwipeLayout-v1.1.8.jar')
+    implementation project(':viewPagerlibrary')
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.6'
+    implementation files('libs/AMap_Location_V4.0.1_20180426.jar')
+    implementation files('libs/AMap3DMap_6.3.1_AMapSearch_6.1.0_20180726.jar')
+    implementation project(':imageselectorLibrary')
+    implementation project(':ucrop')
+    implementation 'pub.devrel:easypermissions:0.1.9'
+}

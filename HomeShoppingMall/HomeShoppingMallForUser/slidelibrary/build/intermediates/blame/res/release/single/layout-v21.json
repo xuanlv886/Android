@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForUser\\slidelibrary\\build\\intermediates\\res\\merged\\release\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\L\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\ec992a991075b6494961b1dec52c80ee\\res\\layout-v21\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForUser\\slidelibrary\\build\\intermediates\\res\\merged\\release\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\L\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\ec992a991075b6494961b1dec52c80ee\\res\\layout-v21\\notification_action.xml"
+    },
+    {
+        "merged": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForUser\\slidelibrary\\build\\intermediates\\res\\merged\\release\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\L\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\ec992a991075b6494961b1dec52c80ee\\res\\layout-v21\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "E:\\project\\HomeShoppingMall\\HomeShoppingMallForUser\\slidelibrary\\build\\intermediates\\res\\merged\\release\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\L\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\ec992a991075b6494961b1dec52c80ee\\res\\layout-v21\\notification_template_icon_group.xml"
+    }
+]

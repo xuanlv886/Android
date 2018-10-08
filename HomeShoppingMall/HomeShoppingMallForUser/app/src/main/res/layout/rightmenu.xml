@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@mipmap/zhezhao"
+        android:padding="15dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:background="#F2F2F2"
+        android:gravity="center|left"
+        android:paddingLeft="15dp"
+        android:text="筛选"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_button"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/tv_reset"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#F2F2F2"
+                android:gravity="center"
+                android:text="重置"
+                android:textColor="#999999"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/tv_complete"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/blue"
+                android:gravity="center"
+                android:text="完成"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView1"
+        android:paddingBottom="15dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_support"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="40dp"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="商品服务"
+                    android:textColor="#666666"
+                    android:textSize="14dp" />
+
+                <ImageView
+                    android:id="@+id/img_support"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/icon_fenleixiala_nor" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_support_hide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <app.cn.extra.mall.user.view.NewsGridView
+                    android:id="@+id/gv_support"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view1"
+                    android:cacheColorHint="#00000000"
+                    android:listSelector="#00000000"
+                    android:numColumns="3"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:stretchMode="columnWidth">
+
+                </app.cn.extra.mall.user.view.NewsGridView>
+
+            </RelativeLayout>
+
+            <CheckBox
+                android:id="@+id/add_cb_bargain"
+                style="@style/CustomCheckboxThemes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/textView3"
+                android:paddingLeft="5dp"
+                android:text="可议价"
+                android:textColor="#666666"
+                android:textSize="13dp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/rl_price"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="40dp"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="价格区间"
+                    android:textColor="#666666"
+                    android:textSize="14dp" />
+
+                <ImageView
+                    android:id="@+id/img_supports"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/icon_fenleixiala_nor" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_price"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:background="#F2F2F2"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:weightSum="2">
+
+                <EditText
+                    android:id="@+id/et_low_price"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="17dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_bg"
+                    android:gravity="center"
+                    android:hint="最低价"
+                    android:inputType="number"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/small_text" />
+
+                <View
+                    android:layout_width="15dp"
+                    android:layout_height="1.5dp"
+                    android:layout_marginBottom="12.5dp"
+                    android:layout_marginTop="12.5dp"
+                    android:background="@color/text_color" />
+
+                <EditText
+                    android:id="@+id/et_high_price"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_bg"
+                    android:gravity="center"
+                    android:hint="最高价"
+                    android:inputType="number"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/small_text" />
+            </LinearLayout>
+
+            <app.cn.extra.mall.user.view.NewsExpandableListView
+                android:id="@+id/elv_common"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:childDivider="@color/white"
+                android:divider="@color/white"
+                android:dividerHeight="1dp"
+                android:listSelector="#00000000"
+                android:scrollbars="none"></app.cn.extra.mall.user.view.NewsExpandableListView>
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
